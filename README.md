@@ -50,9 +50,9 @@ def title_print(message='', length=80):
     print('-'*length)
 
 >>> title_print("Default length of a terminal.")
--------------------------------------------------------------------------------
+################################################################################
 Default length of a terminal.
--------------------------------------------------------------------------------
+################################################################################
 ```
 
 >Create a function that receives height and length of a rectangle. It should print a rectangle with those metrics or a 4x4 one, if none were given.
@@ -60,9 +60,9 @@ Default length of a terminal.
 One other tool we can use in the world of functions is keyword arguments. This means calling a function and specifying the argument names when sending them. This clarifies the code and eases maintenance.
 ```python
 >>> title_print(length=5, message="We repeat, this is only a test. This is only a test.")
------
+#####
 We repeat, this is only a test. This is only a test.
------
+#####
 ```
 
 Notice that when using keyword arguments, their order isn't import. But, they must come after any positional keyword arguments. If we use a keyword argument and provide a positional after it, we'll get an error.
