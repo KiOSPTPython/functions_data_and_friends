@@ -334,3 +334,64 @@ In this example, we foolishly try to replicate a famous experiment and fail. The
 
 Mind? Blown.
 >Create a function with a default argument as a list. Append an item to the list inside the function and print the list. Call the function a few times with no arguments. Gotcha.
+
+## Finals
+Do you want to play a game? Let's build a Tic Tac Toe game. The rules of the game are straight forward. The user plays against the computer and, each turn, the user/computer choose where to place their mark. Once there's 3 in a row of the same mark, one of them wins. The important part is splitting the game into small tasks as functions and then using them to create the game.
+
+
+Below is a template you can use to write the game. Feel free to start from scratch or change it. 
+```python
+from random import choice, randint
+# r = randint(2, 7)
+# Will randomly choose a number between 2 and 7
+# c = choice([4, 3, 7, 1])
+# Will randomly choose one of the numbers from the list
+
+
+PLAYER = 'x'
+COMP = '0'
+BOARD = """----------------------------
+|   {0}    |   {1}    |   {2}    |
+|  {0} {0}   |  {1} {1}   |  {2} {2}   |
+|   {0}    |   {1}    |   {2}    |
+----------------------------
+|   {3}    |   {4}    |   {5}    |
+|  {3} {3}   |  {4} {4}   |  {5} {5}   |
+|   {3}    |   {4}    |   {5}    |
+----------------------------
+|   {6}    |   {7}    |   {8}    |
+|  {6} {6}   |  {7} {7}   |  {8} {8}   |
+|   {6}    |   {7}    |   {8}    |
+----------------------------"""
+
+
+def display_board(status):
+    """Fills up a board template with symbols according to status."""
+    # The *list notation here will send all its items as arg, e.g. format('x', '0', ' ', 'x', ...)
+    # This is instead of explicitly writing format(status[0], status[1], status[2], ...)
+    print(BOARD.format(*status))
+
+
+def player_move(status):
+    
+
+def computer_move(status):
+    
+
+def winner(symbol):
+    
+
+def win_3(sequence):
+    
+
+def game_end(status):
+    
+
+def play():
+    """Starts the game!"""
+    status = [' ']*9
+    display_board(status)
+    
+
+play()
+```
